@@ -1,16 +1,5 @@
 {{- define "main" }}
 
-<h1>Alo</h1>
-
-<header class="page-header">
-  <h1>{{ .Title }}</h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
-  {{- end }}
-</header>
-
 <header class="page-header">
   <h1>
     {{ .Title }}
@@ -74,5 +63,11 @@
 </div>
 {{- end }}
 {{- end }}
+
+<ul class="terms-tags">
+  {{ range .Site.Taxonomies.tags }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} <sup><strong> {{ .Count }}</strong></sup></a> </li>
+  {{ end }}
+</ul>
 
 {{- end }}{{/* end main */}}
