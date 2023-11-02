@@ -1,12 +1,23 @@
 {{- define "main" }}
 
+<h1>Alo</h1>
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
 <header class="page-header">
   <h1>
     {{ .Title }}
     {{- if (.Param "ShowRssButtonInSectionTermList") }}
     {{- $rss := (.OutputFormats.Get "rss") }}
     {{- if (eq .Kind `page`) }}
-      {{- $rss = (.Parent.OutputFormats.Get "rss") }}
+    {{- $rss = (.Parent.OutputFormats.Get "rss") }}
     {{- end }}
     {{- with $rss }}
     <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
