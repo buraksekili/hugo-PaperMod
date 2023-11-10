@@ -14,3 +14,15 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .dark {
     --hljs-bg: rgb(46, 46, 51);
 }
+
+.anchor {
+    margin-left: 0.2em;
+}
+
+.footnotes {
+   font-size: 0.8em;
+}
+
+.post-content > p {
+    letter-spacing: 0.01em;
+}
