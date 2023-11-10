@@ -26,3 +26,15 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .post-content > p {
     letter-spacing: 0.01em;
 }
+
+.reference {
+    font-size: 0.8em;
+    text-align: center;
+    font-style: italic;
+    margin-top: -0.5em !important;
+}
+
+img {
+    width: 70%;
+    max-width: 80%;
+}
