@@ -16,7 +16,6 @@
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
       {{- partial "translation_list.html" . -}}
-      {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
     </div>
     {{- end }}
@@ -36,12 +35,18 @@
   {{- end }}
 
   <footer class="post-footer">
+    <div class="social-icons">
+    {{- partial "edit_post.html" . -}}
+    </div>
+
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
+
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
@@ -49,6 +54,8 @@
     {{- partial "share_icons.html" . -}}
     {{- end }}
   </footer>
+
+
 
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}

@@ -38,3 +38,15 @@ img {
     width: 70%;
     max-width: 80%;
 }
+
+.edit-post-span {
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+
+}
+.edit-post-span > svg {
+    margin-left: 0.1em;
+    margin-bottom: 0.1em;
+}
