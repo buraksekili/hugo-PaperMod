@@ -50,3 +50,11 @@ img {
     margin-left: 0.1em;
     margin-bottom: 0.1em;
 }
+
+.profile-description > ul {
+    padding-left: 2em;
+}
+
+.profile {
+    letter-spacing: 0.01em;
+}
